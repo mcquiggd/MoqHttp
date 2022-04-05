@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MoqHttp.API", "MoqHttp.API\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MoqHttp.Tests", "MoqHttp.Tests\MoqHttp.Tests.csproj", "{EFF3250E-9726-45AB-8F89-A4EE96FCAB2B}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D538142D-1125-43B8-A72B-AE0A62D843A6}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F6D0061B-2491-47E3-85EB-6551F77DB887}"
 	ProjectSection(SolutionItems) = preProject
 		azure-pipelines.yml = azure-pipelines.yml
 	EndProjectSection
