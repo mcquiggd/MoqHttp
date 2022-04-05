@@ -1,7 +1,7 @@
 using System.Text.Json;
 using Microsoft.AspNetCore.Mvc;
 
-namespace moqhttp.API.Controllers;
+namespace MoqHttp.API.Controllers;
 
 [ApiController]
 [Route("[controller]")]

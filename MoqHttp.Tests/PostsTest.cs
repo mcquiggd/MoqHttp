@@ -5,10 +5,10 @@ using System.Threading;
 using System.Threading.Tasks;
 using Moq;
 using Moq.Protected;
-using moqhttp.API.Controllers;
+using MoqHttp.API.Controllers;
 using Xunit;
 
-namespace moqhttp.Tests;
+namespace MoqHttp.Tests;
 
 public class PostsTest
 {
