@@ -14,8 +14,8 @@ variables:
 
 steps:
 - task: DotNetCoreCLI@2
+  displayName: 'Unit Tests'
   inputs:  
-    displayName: 'Unit Tests'
     command: 'test'
     projects: '**/*Tests/*.csproj'
     testRunTitle: 'Unit Tests'
