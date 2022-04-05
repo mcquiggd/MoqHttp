@@ -22,7 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\moqhttp.API\moqhttp.API.csproj" />
+    <ProjectReference Include="..\MoqHttp.API\MoqHttp.API.csproj" />
   </ItemGroup>
 
 </Project>
