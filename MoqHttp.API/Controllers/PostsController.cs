@@ -8,22 +8,26 @@ namespace MoqHttp.API.Controllers;
 public class PostsController : ControllerBase
 {
     private readonly HttpClient _httpClient;
-    private const string _url = "https://jsonplaceholder.typicode.com/posts";
+    private const string URL = "https://jsonplaceholder.typicode.com";
 
     public PostsController(HttpClient httpClient)
     {
         _httpClient = httpClient;
+        _httpClient.BaseAddress = new Uri(URL);
+
     }
 
+    [HttpGet]
     public async Task<IEnumerable<JsonElement>> GetPosts()
     {
-        var response = await _httpClient.GetAsync(_url);
+        var response = await _httpClient.GetAsync("/posts");
         var body = await response.Content.ReadAsStringAsync();
         var posts = JsonSerializer.Deserialize<IEnumerable<JsonElement>>(body);
 
         return posts;
     }
 
+    [HttpPost]
     public async Task<JsonElement> CreatePost(string title)
     {
         var payload = new
@@ -32,7 +36,7 @@ public class PostsController : ControllerBase
         };
 
         var httpContent = new StringContent(JsonSerializer.Serialize(payload));
-        var response = await _httpClient.PostAsync(_url, httpContent);
+        var response = await _httpClient.PostAsync("/posts", httpContent);
         var body = await response.Content.ReadAsStringAsync();
         var created = JsonSerializer.Deserialize<JsonElement>(body);
 
