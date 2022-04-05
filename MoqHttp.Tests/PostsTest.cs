@@ -13,7 +13,7 @@ namespace MoqHttp.Tests;
 public class PostsTest
 {
     [Fact]
-    public async void ShouldReturnPosts()
+    public async Task ShouldReturnPosts()
     {
         // Arrange        
         var response = new HttpResponseMessage
@@ -37,7 +37,7 @@ public class PostsTest
     }
 
     [Fact]
-    public async void ShouldCallCreatePostApi()
+    public async Task ShouldCallCreatePostApi()
     {
         // Arrange
         var response = new HttpResponseMessage
